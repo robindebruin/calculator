@@ -1,0 +1,71 @@
+<div class="row">
+  <div class="col-5">
+
+    <div class="row">
+      <div class="col-12">
+        <app-display [displayValue]="displayValue"></app-display>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-3">
+        <app-digit-button [digit]="'1'" (digitSelected)="digitSelected($event)"></app-digit-button>
+      </div>
+      <div class="col-3">
+        <app-digit-button [digit]="'2'" (digitSelected)="digitSelected($event)"></app-digit-button>
+      </div>
+      <div class="col-3">
+        <app-digit-button [digit]="'3'" (digitSelected)="digitSelected($event)"></app-digit-button>
+      </div>
+      <div class="col-3">
+        <app-operator-button [operator]="'+'" (operatorSelected)="operatorSelected($event)"></app-operator-button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-3">
+        <app-digit-button [digit]="'4'" (digitSelected)="digitSelected($event)"></app-digit-button>
+      </div>
+      <div class="col-3">
+        <app-digit-button [digit]="'5'" (digitSelected)="digitSelected($event)"></app-digit-button>
+      </div>
+      <div class="col-3">
+        <app-digit-button [digit]="'6'" (digitSelected)="digitSelected($event)"></app-digit-button>
+      </div>
+      <div class="col-3">
+        <app-operator-button [operator]="'/'" (operatorSelected)="operatorSelected($event)"></app-operator-button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-3">
+        <app-digit-button [digit]="'7'" (digitSelected)="digitSelected($event)"></app-digit-button>
+      </div>
+      <div class="col-3">
+        <app-digit-button [digit]="'8'" (digitSelected)="digitSelected($event)"></app-digit-button>
+      </div>
+      <div class="col-3">
+        <app-digit-button [digit]="'9'" (digitSelected)="digitSelected($event)"></app-digit-button>
+      </div>
+      <div class="col-3">
+        <app-operator-button [operator]="'-'" (operatorSelected)="operatorSelected($event)"></app-operator-button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-3">
+        <app-digit-button [digit]="'0'" (digitSelected)="digitSelected($event)"></app-digit-button>
+      </div>
+      <div class="col-3">
+          <app-operator-button [operator]="'√'" (operatorSelected)="operatorSelected($event)"></app-operator-button>
+        </div>
+        <div class="col-3">
+            <app-operator-button [operator]="'='" (operatorSelected)="total()"></app-operator-button>
+          </div>
+          <div class="col-3">
+              <app-operator-button [operator]="'C'" (operatorSelected)="clear()"></app-operator-button>
+            </div>
+    </div>
+  </div>
+</div>
+<p>displayValue: {{displayValue}}</p>
+<p>memory: {{memory}}</p>
+<p>overwriteValue: {{overwriteValue}}</p>
+<p>savedOperator: {{savedOperator}}</p>
